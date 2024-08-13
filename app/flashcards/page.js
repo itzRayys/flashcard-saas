@@ -6,6 +6,7 @@ import { collection, doc, getDoc, setDoc } from "firebase/firestore"
 import { db } from "@/firebase"
 import { useRouter } from "next/navigation"
 import { Card, CardActionArea, CardContent, Container, Grid, Typography } from "@mui/material"
+import Navbar from "../components/Navbar"
 
 export default function Flashcards(){
     const {isLoaded, isSignedIn, user} = useUser()
@@ -37,23 +38,27 @@ export default function Flashcards(){
         router.push(`flashcard?id=${id}`)
     }
 
-    return(<Container maxWidth='100vw'>
-        <Grid container spacing={3} sx={{mt: 4}}>
-            {flashcards.map((flashcard, index) => (
-                <Grid item xs={12} sm={6} md={4} key={index}>
-                    <Card>
-                        <CardActionArea onClick={() => {
-                            handleCardClick(flashcard.name)
-                        }}>
-                            <CardContent>
-                                <Typography variant='h6'>
-                                    {flashcard.name}
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                    </Card>
-                </Grid>
-            ))}
-        </Grid>
-    </Container>)
+    return(
+    <div>
+        <Navbar/>
+        <Container maxWidth='100vw'>
+            <Grid container spacing={3} sx={{mt: 4}}>
+                {flashcards.map((flashcard, index) => (
+                    <Grid item xs={12} sm={6} md={4} key={index}>
+                        <Card>
+                            <CardActionArea onClick={() => {
+                                handleCardClick(flashcard.name)
+                            }}>
+                                <CardContent>
+                                    <Typography variant='h6'>
+                                        {flashcard.name}
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                    </Grid>
+                ))}
+            </Grid>
+        </Container>
+    </div>)
 }
