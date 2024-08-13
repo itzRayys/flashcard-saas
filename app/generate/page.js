@@ -2,9 +2,10 @@
 
 import { useUser } from "@clerk/nextjs"
 import { Box, Button, Card, CardActionArea, CardContent, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Paper, TextField, Typography } from "@mui/material"
-import { getDoc, writeBatch } from "firebase/firestore"
+import { doc, getDoc, writeBatch, collection } from "firebase/firestore"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
+import { db } from "@/firebase"
 
 
 export default function Generate(){
@@ -32,11 +33,11 @@ export default function Generate(){
     }
 
     const handleOpen = () => {
-        setOpenI(true)
+        setOpen(true)
     }
     
     const handleClose = () => {
-        setOpenI(false)
+        setOpen(false)
     }
 
     const saveFlashcards = async () => {
