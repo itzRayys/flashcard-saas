@@ -1,4 +1,6 @@
 import React from "react";
+import getStripe from "@/utils/get-stripe";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import {
   AppBar,
   Toolbar,
@@ -38,6 +40,7 @@ const HeroSection = () => (
           color="secondary"
           size="large"
           sx={{ mx: 1 }}
+          href='/sign-up'
         >
           Get Started
         </Button>
