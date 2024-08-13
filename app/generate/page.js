@@ -29,7 +29,8 @@ export default function Generate(){
 
     const handleCardClick = (id) => {
         setFlipped((prev) => ({
-            [id]: !prev[id]
+            ...prev,
+            [id]: !prev[id],
         }))
     }
 

@@ -34,7 +34,7 @@ export default function Flashcards(){
     }
     
     const handleCardClick = (id) =>{
-        router.push(`flashcards?id=${id}`)
+        router.push(`flashcard?id=${id}`)
     }
 
     return(<Container maxWidth='100vw'>
@@ -43,7 +43,7 @@ export default function Flashcards(){
                 <Grid item xs={12} sm={6} md={4} key={index}>
                     <Card>
                         <CardActionArea onClick={() => {
-                            handleCardClick(id)
+                            handleCardClick(flashcard.name)
                         }}>
                             <CardContent>
                                 <Typography variant='h6'>
