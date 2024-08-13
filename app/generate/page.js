@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { db } from "@/firebase"
 
+// 1:19:00
 
 export default function Generate(){
     const {isLoaded, isSignedIn, user} = useUser()
@@ -15,7 +16,7 @@ export default function Generate(){
     const [text, setText] = useState('')
     const [name, setName] = useState('')
     const [open, setOpen] = useState(false)
-    const router = useRouter
+    const router = useRouter()
 
     const handleSubmit = async () => {
         fetch('api/generate', {
