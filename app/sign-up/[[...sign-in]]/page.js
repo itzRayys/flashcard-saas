@@ -1,6 +1,6 @@
 import React from "react";
 import { SignUp } from "@clerk/nextjs";
-import { Container, Box, Typography, Grid, Paper } from "@mui/material";
+import { Container, Box, Typography, Grid } from "@mui/material";
 
 const SignUpPage = () => {
   return (
@@ -38,23 +38,23 @@ const SignUpPage = () => {
               appearance={{
                 elements: {
                   formButtonPrimary: {
-                    backgroundColor: "#1976d2", // Primary button color
+                    backgroundColor: "#1976d2", 
                     ":hover": {
-                      backgroundColor: "#115293", // Hover color for the button
+                      backgroundColor: "#115293", 
                     },
                   },
                   card: {
-                    boxShadow: "none", // Removed shadow from the inner card for a cleaner look
+                    boxShadow: "none", 
                   },
                   formFieldInput: {
-                    borderColor: "#1976d2", // Input field border color
+                    borderColor: "#1976d2", 
                     ":focus": {
-                      borderColor: "#115293", // Border color on focus
+                      borderColor: "#115293", 
                     },
                   },
                 },
                 variables: {
-                  colorPrimary: "#1976d2", // Primary color for Clerk components
+                  colorPrimary: "#1976d2", 
                 },
               }}
             />
@@ -68,7 +68,7 @@ const SignUpPage = () => {
         xs={false}
         md={6}
         sx={{
-          backgroundColor: "#0d47a1", // Blue background for the right side
+          backgroundColor: "#0d47a1", 
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -94,7 +94,7 @@ const SignUpPage = () => {
         </Box>
         <Box
           component="img"
-          src="/images/signup-illustration.png" // Replace this with your actual image path
+          src="/images/signup-illustration.png"
           alt="Sign Up Illustration"
           sx={{
             width: "80%",
