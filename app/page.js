@@ -58,6 +58,7 @@ const HeroSection = () => (
             backgroundColor: "#1976d2",
             ":hover": { backgroundColor: "#115293" },
           }}
+          href="/sign-up"
         >
           Get Started for Free
         </Button>
