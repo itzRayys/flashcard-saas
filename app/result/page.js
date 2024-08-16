@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation"
 import getStripe from "@/utils/get-stripe"
 import { useSearchParams } from "next/navigation"
 import { ElevatorSharp } from "@mui/icons-material"
-import { CircularProgress, Container, Typography } from "@mui/material"
+import { CircularProgress, Container, Typography, Box } from "@mui/material"
 
 const ResultPage = () => {
     const router = useRouter()

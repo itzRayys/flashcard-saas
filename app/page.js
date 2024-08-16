@@ -192,7 +192,7 @@ const PricingSection = () => (
         gutterBottom
         sx={{ fontWeight: "bold", color: "#0d47a1" }}
       >
-        Choose the Plan That's Right for You
+        Choose the Plan That&#39;s Right for You
       </Typography>
       <Typography
         variant="body1"
@@ -200,7 +200,7 @@ const PricingSection = () => (
         paragraph
         sx={{ maxWidth: "600px", margin: "0 auto", mb: 8 }}
       >
-        We offer flexible pricing options to fit your needs, whether you're just
+        We offer flexible pricing options to fit your needs, whether you&#39;re just
         getting started or need more advanced features.
       </Typography>
       <Grid container spacing={4} justifyContent="center">
@@ -383,7 +383,7 @@ const TestimonialsSection = () => (
               {testimonial.role}
             </Typography>
             <Typography variant="body1" sx={{ fontStyle: "italic" }}>
-              "{testimonial.quote}"
+              &#34;{testimonial.quote}&#34;
             </Typography>
           </Paper>
         ))}
