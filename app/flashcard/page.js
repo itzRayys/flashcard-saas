@@ -59,7 +59,7 @@ export default function Flashcard(){
                                                 <Box sx={{
                                                     perspective: '1000px', 
                                                     '& > div': {
-                                                        transition: 'transform 0.6',
+                                                        transition: 'transform 0.6s',
                                                         transformStyle: 'preserve-3d',
                                                         position: 'relative',
                                                         width: '100%',

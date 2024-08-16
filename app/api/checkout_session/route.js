@@ -13,7 +13,6 @@ export async function POST(req){
         payment_method_types: ['card'],
         line_items: [
           {
-            name: 'Pro Subscription',
             price_data: {
                 currency: 'usd',
                 product_data: {
