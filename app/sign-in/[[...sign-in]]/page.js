@@ -41,7 +41,7 @@ const SignInPage = () => {
               path="/sign-in"
               routing="path"
               signUpUrl="/sign-up"
-              redirectUrl="/dashboard" // Update this URL based on where you want to redirect after sign-in
+              redirectUrl="/" // Update this URL based on where you want to redirect after sign-in
               appearance={{
                 elements: {
                   formButtonPrimary: {

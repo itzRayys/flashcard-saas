@@ -24,6 +24,15 @@ const Navbar = () => (
         </Button>
       </SignedOut>
       <SignedIn>
+        <Button color='inherit' href='/' sx={{ mx: 1 }}>
+          Home
+        </Button>
+        <Button color='inherit' href='/generate' sx={{ mx: 1 }}>
+          Generate Flashcards
+        </Button>
+        <Button color='inherit' href='/flashcards' sx={{ mx: 1 }}>
+          Saved Flashcards
+        </Button>
         <UserButton/>
       </SignedIn>
     </Toolbar>
