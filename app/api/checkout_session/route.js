@@ -9,7 +9,7 @@ const formatAmountForStripe = (amount) => {
 
 export async function POST(req){
     const params = {
-        submit_type: 'subscription',
+        mode: 'subscription',
         payment_method_types: ['card'],
         line_items: [
           {
@@ -19,7 +19,7 @@ export async function POST(req){
                 product_data: {
                     name: 'Pro Subscription',
                 },
-                unit_amount: formatAmountForStripe(10),
+                unit_amount: formatAmountForStripe(15),
                 recurring:{
                     interval: 'month',
                     interval_count: 1,
@@ -28,10 +28,10 @@ export async function POST(req){
             quantity: 1,
           },
         ],
-        success_url: `${req.headers.origin}/result?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${req.headers.origin}/result?session_id={CHECKOUT_SESSION_ID}`,
+        success_url: `${req.headers.get('origin')}/result?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${req.headers.get('origin')}/result?session_id={CHECKOUT_SESSION_ID}`,
       };
-      const checkoutSession = await stripe.checkout.sessions.create(params);
+      const checkoutSession = await stripe.checkout.sessions.create(params)
 
       return NextResponse.json(checkoutSession, {
         status: 200,
