@@ -22,7 +22,7 @@ const handleSubmit = async () => {
   const checkoutSession = await fetch('/api/checkout_session', {
     method: 'POST',
     headers:{
-      origin: 'http://localhost:3000/',
+      origin: 'https://flashcard-saas-ecru.vercel.app/',
     },
   })
 

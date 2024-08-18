@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation"
 import getStripe from "@/utils/get-stripe"
 import { useSearchParams } from "next/navigation"
 import { ElevatorSharp } from "@mui/icons-material"
-import { CircularProgress, Container, Typography, Box } from "@mui/material"
+import { CircularProgress, Container, Typography, Box, Button } from "@mui/material"
 
 const ResultPage = () => {
     const router = useRouter()
@@ -71,6 +71,7 @@ const ResultPage = () => {
                         <Typography variant='body1'>We have received your payment. You will receive
                             an email with your order details shortly.
                         </Typography>
+                        <Button sx={{mt: 2}} variant='contained' href="/">Home</Button>
                     </Box>
                 </>
             ): (
@@ -79,6 +80,7 @@ const ResultPage = () => {
                 <Box sx={{mt:22}}>
                     <Typography variant='body1'>Your payment was not successful. Please try again.
                     </Typography>
+                    <Button sx={{mt: 2}} variant='contained' href="/">Home</Button>
                 </Box>
             </>) }
         </Container>
