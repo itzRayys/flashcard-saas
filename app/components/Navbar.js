@@ -10,16 +10,17 @@ import {
   Box,
   Menu,
   MenuItem,
-  Tooltip,
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import SchoolIcon from "@mui/icons-material/School";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import MenuIcon from "@mui/icons-material/Menu";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const router = useRouter();
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -29,10 +30,18 @@ const Navbar = () => {
     setAnchorEl(null);
   };
 
+  const handleHomeClick = () => {
+    router.push("/");
+  };
+
   return (
     <AppBar position="static" sx={{ backgroundColor: "#00796b" }}>
       <Toolbar>
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+        <Typography
+          variant="h6"
+          sx={{ flexGrow: 1, cursor: "pointer" }}
+          onClick={handleHomeClick}
+        >
           Flashcard SaaS
         </Typography>
 
